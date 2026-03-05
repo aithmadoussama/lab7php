@@ -1,89 +1,89 @@
-# 🎓 Student Management System – LAB8
+# 🎓 Système de Gestion des Étudiants – LAB8
 
 ![PHP](https://img.shields.io/badge/PHP-8.x-blue)
 ![Architecture](https://img.shields.io/badge/Architecture-MVC-green)
-![Security](https://img.shields.io/badge/Security-CSRF%20Protected-red)
-![Status](https://img.shields.io/badge/Status-Academic%20Project-orange)
-![License](https://img.shields.io/badge/License-Educational-lightgrey)
+![Security](https://img.shields.io/badge/Security-Protection%20CSRF-red)
+![Status](https://img.shields.io/badge/Status-Projet%20Académique-orange)
+![License](https://img.shields.io/badge/License-Éducatif-lightgrey)
 
 ---
 
-## 📌 Overview
+## 📌 Présentation
 
-This project is a **Student Management Web Application** developed in **PHP** using a custom **MVC architecture**.
+Ce projet est une **application web de gestion des étudiants** développée en **PHP** en utilisant une **architecture MVC personnalisée**.
 
-It provides a secure system for managing students and departments (filières), including authentication and protected routes.
-
----
-
-## ✨ Features
-
-- 🔐 Secure Authentication (Login / Logout)
-- 👨‍🎓 Student Management (CRUD)
-- 🏫 Department / Filière Management
-- 🛡️ CSRF Protection
-- 🔎 Data Validation & Sanitization
-- 🧭 Custom Router
-- 🗃️ DAO Pattern for Database Access
-- 📝 Logging System
+Elle permet de gérer les étudiants et les filières de manière sécurisée, avec un système d’authentification et des routes protégées.
 
 ---
 
-## 🏗️ Project Architecture
+## ✨ Fonctionnalités
+
+- 🔐 Authentification sécurisée (Connexion / Déconnexion)
+- 👨‍🎓 Gestion des étudiants (CRUD : Créer, Lire, Modifier, Supprimer)
+- 🏫 Gestion des filières
+- 🛡️ Protection contre les attaques CSRF
+- 🔎 Validation et nettoyage des données
+- 🧭 Routeur personnalisé
+- 🗃️ Utilisation du pattern DAO pour l’accès à la base de données
+- 📝 Système de journalisation (Logs)
+
+---
+
+## 🏗️ Architecture du projet
 
 ```
 lab8/
 │
-├── public/              # Application entry point (index.php)
+├── public/              # Point d'entrée de l'application (index.php)
 ├── src/
-│   ├── Container/       # Application Factory
-│   ├── Controller/      # MVC Controllers
+│   ├── Container/       # Fabrique de l'application
+│   ├── Controller/      # Contrôleurs MVC
 │   ├── Core/            # Router, Request, Response, View
-│   ├── Dao/             # Database Access Layer
-│   └── Security/        # Authentication & Security
+│   ├── Dao/             # Couche d'accès à la base de données
+│   └── Security/        # Authentification et sécurité
 │
-├── views/               # PHP Views
-├── logs/                # Log files
+├── views/               # Vues PHP
+├── logs/                # Fichiers de journalisation
 └── docs/                # Documentation
 ```
 
 ---
 
-## ⚙️ Technologies Used
+## ⚙️ Technologies utilisées
 
-- PHP (OOP)
+- PHP (Programmation Orientée Objet)
 - MySQL
-- MVC Architecture
-- DAO Design Pattern
+- Architecture MVC
+- Pattern DAO
 - HTML / CSS
-- Web Security Best Practices
+- Bonnes pratiques de sécurité web
 
 ---
 
-## 🚀 Installation Guide
+## 🚀 Guide d’installation
 
-### 1️⃣ Clone Repository
+### 1️⃣ Cloner le dépôt
 
 ```bash
 git clone https://github.com/your-username/lab8.git
 ```
 
-### 2️⃣ Database Setup
+### 2️⃣ Configuration de la base de données
 
-- Create a MySQL database
-- Update credentials in:
+- Créer une base de données MySQL
+- Modifier les informations de connexion dans :
 
 ```
 src/Dao/DBConnection.php
 ```
 
-### 3️⃣ Run the Application
+### 3️⃣ Lancer l’application
 
-- Place project inside `htdocs` (XAMPP)  
-  OR
-- Configure a Virtual Host
+- Placer le projet dans `htdocs` (XAMPP)  
+  ou  
+- Configurer un Virtual Host
 
-Access via:
+Accéder à l’application via :
 
 ```
 http://localhost/lab8/public
@@ -91,28 +91,31 @@ http://localhost/lab8/public
 
 ---
 
-## 🔐 Security Implementation
+## 🔐 Sécurité implémentée
 
-The system includes:
+Le système inclut :
 
-- CSRF Token Protection
-- Input Validation
-- Data Sanitization
-- Authentication Middleware
-- Logging System
+- Protection par token CSRF
+- Validation des entrées utilisateur
+- Nettoyage des données
+- Middleware d’authentification
+- Système de journalisation
 
 ---
 
-## 👨‍💻 Main Components
+## 👨‍💻 Composants principaux
 
-### 🔄 Router
-Handles:
-- URL Parsing
-- Controller Dispatching
-- Method Execution
+### 🔄 Routeur
 
-### 🗄️ DAO Layer
-Encapsulates SQL operations:
+Le routeur gère :
+
+- l’analyse des URL
+- la redirection vers les contrôleurs
+- l’exécution des méthodes correspondantes
+
+### 🗄️ Couche DAO
+
+Cette couche encapsule les opérations SQL :
 
 - `EtudiantDao.php`
 - `FiliereDao.php`
@@ -120,43 +123,24 @@ Encapsulates SQL operations:
 
 ---
 
-## 📷 Screenshots
+## 📌 Améliorations futures
 
-_Add screenshots of your application here for better presentation._
-
-Example:
-
-```
-![Dashboard Screenshot](docs/screenshot1.png)
-```
+- Gestion des rôles utilisateurs
+- Intégration d’une API REST
+- Amélioration de l’interface avec Bootstrap
+- Mise en place de tests unitaires
 
 ---
 
-## 📚 Educational Purpose
+## 🧑‍🎓 Auteur
 
-This project was developed as part of **LAB8** for academic purposes.
+Ait Hmad Oussama
+---
+
+
 
 ---
 
-## 📌 Future Improvements
+## 🎥 Vidéo de démonstration montrant la réussite du test
 
-- Role-based access control
-- REST API integration
-- Improved UI with Bootstrap
-- Unit testing implementation
-
----
-
-## 🧑‍🎓 Author
-
-Developed as part of a university lab project.
-
----
-
-## 📄 License
-
-Educational use only.
-
-## Vidéo de démonstration montrant la réussite du test
-
- https://github.com/user-attachments/assets/4ea46a31-de86-4527-bdcb-3bde47659364
+https://github.com/user-attachments/assets/4ea46a31-de86-4527-bdcb-3bde47659364
